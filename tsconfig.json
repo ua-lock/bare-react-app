@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    // react-jsx instead of 'react' only makes it not require the  
+    // react package to be imported for a react component file
+    "jsx": "react",
+    "removeComments": true,
+  },
+  "exclude": [
+    "webpack.config.js"
+  ],
+  "include": [
+    "src"
+  ]
+}

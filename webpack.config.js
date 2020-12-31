@@ -3,25 +3,26 @@ const path = require('path')
 
 module.exports = {
   mode: 'development',
-	entry:  path.join(__dirname, 'src', 'index.jsx'),
+  entry: path.join(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'app.bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    port: 3000
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.ts(x)?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        resolve: {
+          extensions: ['.ts', '.tsx']
+        }
       }
     ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
