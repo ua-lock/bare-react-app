@@ -1,3 +1,3 @@
 ### Bare React App
 
-Bare-bone mounted React application with Webpack & Babel
+Bare-bone mounted React application with Typescript
